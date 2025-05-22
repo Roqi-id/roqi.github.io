@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title> TopUp Games - Murah & cepat<</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <h1>GAMES<span>STORE</span></h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#history">History</a>
+        <a href="#login">Login</a>
+      </nav>  
+    </header>
+    
+    <div class="banner">
+      <h2>Top Up Game Murah & Instan</h2>
+      <p>Diamond/Vocher/UC dalam 3 menit</p>
+    </div>
+    
+    <div class="game-list">
+      <div class="game-card">
+        <img src="mlbb.png" alt="Mobile Legend">]
+        <h3>Mobile Legends</h3>
+        <button class="btn-topup">Top Up now</button>
+      </div>
+    
+    <div class="game-card">
+      <img src="freefire.png"alt="Free Fire">
+      <h3>Free Fire</h3>
+      <button class="btn-topup">Top Up Now</button>
+    </div>
+  </div>
+  
+  <div class="payment-container">
+    <h2>Pembayaran Diamond</h2>
+    <form id="paymentFrom">
+      <label> ID Game:</label>
+      <input type="text"required>
+      
+      <label>Jumlah Diamond:</label>
+      <select>
+        <option>5 Diamond - Rp 1.950</option>
+        <option>10 Diamond - Rp 2.600</option>
+      </select>
+      
+      <label> Metode pembayaran:</label>
+      <div  class="payment - menthods">
+        <label><input type="radio" name="menthod"> DANA</label>
+        <lable><input type="radio" name="menthods">GOPAY</lable>
+      </div>
+      
+      
+      <button type="submit">Bayar Sekarang</button>
+    </form>
+  </div>
+
+    
+  
+  <footer>
+    <p>copyright 2025 GameStore - Layanan Top Up Game Terpercaya</p>
+  </footer>
+  
+  <script src="<script.js"></script>
+</body>
+</html>
+
+<div class="history-container">
+  <h2>Riwayat Transaksi</h2>
+  <div id="transactionList"></div>
+</div>
+
+<script>
+  const transaction = JSON.parse(localStorage.getItem('lastTransaction'));
+  const list = document.getElementById('transactionList');
+  
+  if(transaction){
+    list.innerHTML ='
+    <div class="transaction-item">
+        <p>Game:${transaction.game}</p>
+        <p>Nominal: ${transaction.amouny}</p>
+        <p>status: <span class="status-pending"${transaction.status}</span></p>
+    </div>
+  ';
+  }
+</script>
+
+<div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<meta name="description" content="Top Up Game Murah dan Cepat untuk Mobile Legends,Free Fire,PUBG Mobile,dan berbagai game populer lainnya">
+<meta name="keywords" content="top up game,voucher game, diamond murah, top up ff, top up ml">
